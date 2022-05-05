@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Team Profile Generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T0rgy/team-profile-generator.git"
+  },
+  "author": "Jacob Torgeson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T0rgy/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/T0rgy/team-profile-generator#readme",
+  "dependencies": {
+    "jest": "^28.0.3"
+  }
+}
