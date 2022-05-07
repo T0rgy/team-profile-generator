@@ -6,9 +6,8 @@ const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const { off } = require('process');
 
-const teamArr = [];
+const teamMembers = [];
 
 const managerInput = () => {
     return inquirer.prompt ([
@@ -61,7 +60,7 @@ const managerInput = () => {
         const { name, employID, email, officeNum } = managerInput;
         const manager = new Manager (name, employID, email, officeNum);
 
-        teamArr.push(manager);
+        teamMembers.push(manager);
         console.log(manager);
     })
     
