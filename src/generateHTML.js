@@ -58,22 +58,22 @@ const internCard = function (intern) {
 generateHTML = (data) => {
     pageArray = [];
 
-    for(let i = 0; i < data.lenght; i++) {
+    for(let i = 0; i < data.length; i++) {
         const employee = data[i];
         const role = employee.getRole();
 
         if(role === 'Manager') {
-            const mCard = generateHTML(employee);
+            const mCard = mangerCard(employee);
 
             pageArray.push(mCard);
         }
         if(role === 'Engineer') {
-            const eCard = generateHTML(employee);
+            const eCard = engineerCard(employee);
 
             pageArray.push(eCard);
         }
         if(role === 'Intern') {
-            const iCard = generateHTML(employee);
+            const iCard = internCard(employee);
 
             pageArray.push(iCard);
         }
@@ -81,7 +81,7 @@ generateHTML = (data) => {
     
     const employeeCards = pageArray.join('')
     const generateTeam = generateTeamPage(employeeCards);
-    return generateTeam
+    return generateTeam;
 };
 
 const generateTeamPage = function(employeeCards) {
@@ -92,9 +92,10 @@ const generateTeamPage = function(employeeCards) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Team Profile</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Public+Sans:300i,300,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -106,15 +107,16 @@ const generateTeamPage = function(employeeCards) {
         <main>
             <div class="container">
                 <div class="row justify-content-center" id="team-cards">
-                    <!--Team Cards--!>
+                    <!--Team Cards-->
                     ${employeeCards}
                 </div>
             </div>
         </main>
         
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </html>
     `
 }

@@ -1,11 +1,13 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
 const generateHTML = require('./src/generateHTML');
 
-const Employee = require('./lib/Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+
+const fs = require('fs');
+const inquirer = require('inquirer');
+
+
 
 const teamMembers = [];
 
@@ -28,8 +30,8 @@ const managerInput = () => {
             type: 'input',
             name: 'employeeId',
             message: "Please enter the manager's employee ID.",
-            validate: employID => {
-                if (employID) {
+            validate: empId => {
+                if (empId) {
                     console.log ("Please enter the manager's employee ID!")
                     return true;
                 } else {
@@ -132,7 +134,7 @@ const addEmployee = () => {
         teamMembers.push(employee);
 
         if (confirmMoreEmployees) {
-            return addEmployee(teamArray);
+            return addEmployee(teamMembers);
         } else {
             return teamMembers;
         }
