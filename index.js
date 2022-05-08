@@ -1,13 +1,10 @@
 const generateHTML = require('./src/generateHTML');
+const fs = require('fs');
+const inquirer = require('inquirer');
 
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-
-const fs = require('fs');
-const inquirer = require('inquirer');
-
-
 
 const teamMembers = [];
 
@@ -58,8 +55,8 @@ const managerInput = () => {
             }
         },
     ])
-    .then(managerInput => {
-        const { name, employeeID, email, officeNumber } = managerInput;
+    .then(mInput => {
+        const { name, employeeID, email, officeNumber } = mInput;
         const manager = new Manager (name, employeeID, email, officeNumber);
 
         teamMembers.push(manager);
@@ -111,7 +108,7 @@ const addEmployee = () => {
         },
         {
             type: 'confirm',
-            name: 'confrimMoreEmployees',
+            name: 'confirmMoreEmployees',
             message: "Would you like to add more team members?",
             default: false,
         },
