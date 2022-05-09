@@ -4,7 +4,7 @@ const mangerCard = function (manager) {
         <div class="card h-100">
             <div class="card-header">
                 <h3>${manager.name}</h3>
-                <i class="fa-duotone fa-user-tie-hair"></i><h4>Manager</h4>
+                <h4>Manager</h4>
             </div>
 
             <div class="card-body">
@@ -23,7 +23,7 @@ const engineerCard = function (engineer) {
         <div class="card h-100">
             <div class="card-header">
                 <h3>${engineer.name}</h3>
-                <i class="fa-regular fa-screwdriver-wrench"></i><h4>Engineer</h4>
+                <h4>Engineer</h4>
             </div>
 
             <div class="card-body">
@@ -42,7 +42,7 @@ const internCard = function (intern) {
     <div class="card h-100">
         <div class="card-header">
             <h3>${intern.name}</h3>
-            <i class="fa-regular fa-graduation-cap"></i><h4>Intern</h4>
+            <h4>Intern</h4>
         </div>
 
         <div class="card-body">
