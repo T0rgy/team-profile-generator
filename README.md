@@ -19,7 +19,7 @@ The user should clone the repository from GitHub. Once cloned run the folling in
 
 ## Usage 
 Use inquirer from your command line to answer questions about your project.
-View walk through video here - [Screencastify]()<br>
+View walk through video here - [Screencastify](https://drive.google.com/file/d/1BmJQcP0NlYl_nX_erni16hp9W8WCryc-/view)<br>
 ![img](./assets/img/screencapture-file-C-Users-Torgy-Desktop-projects-team-profile-generator-dist-index-html-2022-05-08-19_08_59.png)
 
 ## License 
