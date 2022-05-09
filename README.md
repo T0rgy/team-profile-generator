@@ -1,20 +1,37 @@
-# team-profile-generator
+# Team Profile Generator
 
 ## Description
-- GIVEN a command-line application that accepts user input
-- WHEN I am prompted for my team members and their information
-- THEN an HTML file is generated that displays a nicely formatted team roster based on user input
-- WHEN I click on an email address in the HTML
-- THEN my default email program opens and populates the TO field of the email with the address
-- WHEN I click on the GitHub username
-- THEN that GitHub profile opens in a new tab
-- WHEN I start the application
-- THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
-- WHEN I enter the team manager’s name, employee ID, email address, and office number
-- THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
-- WHEN I select the engineer option
-- THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-- WHEN I select the intern option
-- THEN I am prompted to enter the intern’s name, ID, em-ail, and school, and I am taken back to the menu
-- WHEN I decide to finish building my team
-- THEN I exit the application, and the HTML is generated
+Using the Inquirer module from Node.js, this application was designed to produce a team profile based on user input and show the information on a newly created html page with a style sheet. This project uses Jest to explain OOP and TDD.
+
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+
+## Installation 
+The user should clone the repository from GitHub. Once cloned run the folling in the terminal to install required modules.
+- "npm init"
+- "npm install inquirer"
+- "npm install jest"
+
+## Usage 
+Use inquirer from your command line to answer questions about your project.
+View walk through video here - [Screencastify]()<br>
+![img](./assets/img/screencapture-file-C-Users-Torgy-Desktop-projects-team-profile-generator-dist-index-html-2022-05-08-19_08_59.png)
+
+## License 
+N/A
+
+## Contributing 
+Contributors should read the installation section. 
+
+## Tests
+In the command line type "npm run test" to run Jest for tests on constructors. 
+
+## Questions
+Any questions please contact at:<br>
+Email: JCTORGE@gmail.com <br>
+gitHub: t0rgy <br>

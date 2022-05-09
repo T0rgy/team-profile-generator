@@ -18,7 +18,7 @@ const managerInput = () => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log ("Please enter the manager's name!");
+                    console.log ("\nPlease enter the manager's name!");
                     return false;
                 }
             }
@@ -26,13 +26,13 @@ const managerInput = () => {
         {
             type: 'input',
             name: 'employeeId',
-            message: "Please enter the manager's employee ID.",
-            validate: empId => {
-                if (empId) {
-                    console.log ("Please enter the manager's employee ID!")
-                    return true;
+            message: "Please enter the manager's ID.",
+            validate: employeeId => {
+                if  (isNaN(employeeId)) {
+                    console.log ("\nPlease enter the manager's ID!")
+                    return false; 
                 } else {
-                    return false;
+                    return true;
                 }
             }
         },
@@ -46,18 +46,18 @@ const managerInput = () => {
             name: 'officeNumber',
             message: "Please enter the manager's office number.",
             validate: officeNum => {
-                if (officeNum) {
-                    console.log ("Please enter the manager's office number!")
-                    return true;
-                } else {
+                if (isNaN(officeNum)) {
+                    console.log ("\nPlease enter the manager's office number!")
                     return false;
+                } else {
+                    return true;
                 }
             }
         },
     ])
     .then(mInput => {
-        const { name, employeeID, email, officeNumber } = mInput;
-        const manager = new Manager (name, employeeID, email, officeNumber);
+        const { name, employeeId, email, officeNumber } = mInput;
+        const manager = new Manager (name, employeeId, email, officeNumber);
 
         teamMembers.push(manager);
         console.log(manager);

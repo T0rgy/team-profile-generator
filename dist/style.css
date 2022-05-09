@@ -1,0 +1,24 @@
+.navbar {
+    background-color: #16BAC5;
+}
+
+
+body {
+    background-color: #EFE9F4;
+}
+
+.card-header {
+    background-color: #171D1C;
+}
+
+.card-header h3, h4 {
+    color: white;
+}
+
+.card-body {
+    background-color: #5FBFF9;
+}
+
+.card-body p {
+    font-weight: bolder;
+}
